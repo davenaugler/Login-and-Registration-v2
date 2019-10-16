@@ -1,0 +1,13 @@
+.custom-title {
+    font-size: 18px;
+}
+
+.error-box {
+    height: auto;
+    width: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #f7aeae;
+    border-radius: 10px;
+}
+

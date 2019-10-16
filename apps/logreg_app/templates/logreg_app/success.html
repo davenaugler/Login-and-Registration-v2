@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="A really cool site!">
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'logreg_app/css/custom-bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'logreg_app/css/style.css' %}">
+    <script src="{% static 'logreg_app/js/script.js' %}"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <img src="{% static 'logreg_app/images/coding_dojo_logo.png' %}" />
+        <h1 class="navbar-brand">Coding Dojo: <span class="text-primary">Success</span></h1>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-end mt-5">
+            <form action="/logout">
+                <button type="submit" class="text-center btn btn-outline-primary mt-2 pl-4 pr-4">&#8249;&nbsp;Logout</button>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col display-1">
+                <h1>Success! Welcome, {{ user.first_name }} {{ user.last_name }}!</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
